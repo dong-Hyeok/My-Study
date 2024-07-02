@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.0"
-kotlin = "1.9.0"
+kotlin = "2.0.0"
 coreKtx = "1.10.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -9,6 +9,39 @@ appcompat = "1.6.1"
 material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
+#Hilt
+hilt = "2.51.1"
+androidx-hilt = "1.2.0"
+#Kapt
+kapt = "1.8.10"
+#Ksp
+ksp = "2.0.0-1.0.21"
+#Retrofit & Gson
+retrofit = "2.9.0"
+#Retrofit Converter-Scalars
+scalars = "2.5.0"
+#OkHttp
+okhttp = "4.9.0"
+#Activity KTX
+activity-ktx = "1.6.1"
+#Framework KTX
+fragment-ktx = "1.6.2"
+#ViewModel
+lifecycle-viewmodel-ktx = "2.4.1"
+#Glide
+glide = "4.12.0"
+#Navigation
+navigation = "2.5.3"
+#Accompanist
+accompanist = "0.31.1-alpha"
+#Splash Screen
+splashscreen = "1.0.0"
+#SDP
+sdp = "1.1.0"
+#Paging
+paging-runtime = "3.1.1"
+# Kotlin Parcelize
+kotlin-parcelize = "1.8.10"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,9 +52,54 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+#Hilt
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt"}
+androidx-hilt-complier = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "androidx-hilt" }
+androidx-hilt-navigation = {group = "androidx.hilt", name = "hilt-navigation-fragment", version.ref = "androidx-hilt"}
+#Retrofit
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+#Gson
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "retrofit"}
+#Converter Gson
+converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+#Retrofit Converter-Scalars
+scalars = { group = "com.squareup.retrofit2", name = "converter-scalars", version.ref = "scalars" }
+#OkHttp
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+#Activity KTX
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity-ktx" }
+#Framework KTX
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx" }
+#ViewModel
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel-ktx" }
+#Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+#Navigation
+navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+#Accompanist
+accompanist-navigation-animation = {group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist"}
+#Splash Screen
+splashscreen = {group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen"}
+#SDP
+sdp = {group = "com.intuit.sdp", name = "sdp-android", version.ref = "sdp"}
+#Paging
+paging = {group = "androidx.paging", name = "paging-runtime", version.ref = "paging-runtime"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin-parcelize" }
 
+[bundles]
+navigation = ["navigation-fragment-ktx", "navigation-ui-ktx", "accompanist-navigation-animation"]
+retrofit = ["retrofit", "gson", "converter-gson", "scalars"]
+okhttp = ["okhttp", "logging-interceptor"]

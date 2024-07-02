@@ -1,4 +1,4 @@
-package com.donghyeok.presentation
+package com.donghyeok.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyLog"
         tools:targetApi="31">
         <activity
-            android:name="com.donghyeok.presentation.MainActivity"
+            android:name="com.donghyeok.presentation.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
